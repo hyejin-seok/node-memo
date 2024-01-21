@@ -1,5 +1,6 @@
 node_modules/
 .prettierignore
+README.md
 
 # Logs
 logs
