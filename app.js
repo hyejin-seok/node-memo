@@ -10,12 +10,13 @@ const users = [];
 const sercureKey = "adfqef1233afdgadf";
 
 app.set("view engine", "ejs");
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 app.use(cookieParser(sercureKey));
 app.use(express.static("public"));
 
+// Middleware to check if the user is authenticated
 const checkAuthenticated = (req, res, next) => {
   if (req.cookies.userCookie) {
     return next(); // User is authenticated
@@ -40,6 +41,7 @@ app.post("/signup", async (req, res) => {
     });
     res.redirect("/login");
   } catch (error) {
+    console.error(error);
     res.redirect("/signup");
   }
 });
@@ -54,37 +56,27 @@ app.get("/login", (req, res) => {
 });
 
 app.post("/login", async (req, res) => {
-  console.log("Login Request Received");
   if (req.cookies && req.cookies.userCookie) {
-    console.log("User is already authenticated");
     res.redirect("/");
   } else {
     const { username, password } = req.body;
-    console.log("Entered username:", username);
-    console.log("Entered password:", password);
-
     const user = users.find(
       (u) => u.username.toLowerCase() === username.toLowerCase()
     );
-    console.log("Found user:", user);
 
     if (user) {
       const passwordMatch = await bcrypt.compare(password, user.password);
-      console.log("Password match result:", passwordMatch);
 
       if (passwordMatch) {
-        console.log("Authentication successful");
         res.cookie("userCookie", username, {
           httpOnly: true,
           maxAge: 60000 * 60, // 1hr
         });
         res.redirect("/");
       } else {
-        console.log("Password does not match");
         res.redirect("/login?error=1");
       }
     } else {
-      console.log("User not found");
       res.redirect("/login?error=1");
     }
   }
