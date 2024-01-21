@@ -1,0 +1,10 @@
+<%- include("partials/header", { pageTitle }) %>
+
+<h1>Memo List</h1>
+<ul>
+  <% memos.forEach((memo) => { %>
+  <li><%= memo.title %> - <%= memo.content %></li>
+  <% }) %>
+</ul>
+
+<%- include("partials/footer") %>
