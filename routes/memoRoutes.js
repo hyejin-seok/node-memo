@@ -4,7 +4,7 @@ const memoController = require("../controllers/memoController");
 
 // Route to add a memo
 router.get("/add", (req, res) => {
-  res.render("memos/addMemo", { pageTitle: "Create Memo" });
+  res.render("memos/addMemo", { pageTitle: "Add Memo" });
 });
 
 // Route to fetch all memos

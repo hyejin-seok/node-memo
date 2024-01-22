@@ -1,0 +1,14 @@
+<%- include("partials/header", { pageTitle: "Form Result" }) %>
+
+<section class="contact-result-container">
+  <% if (isSuccess) { %>
+  <h1>Submission Successful!</h1>
+  <p>Thank you for your submission.</p>
+  <% } else { %>
+  <h1>Submission Failed</h1>
+  <p>There was an error processing your submission. Please try again.</p>
+  <% } %>
+  <a href="/"><button type="submit">Go Home</button></a>
+</section>
+
+<%- include("partials/footer") %>

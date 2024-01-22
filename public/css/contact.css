@@ -78,3 +78,30 @@
     color: var(--bg-color);
 }
 
+.contact-result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-result-container p {
+    font-size: 1.2rem;
+}
+
+.contact-result-container button {
+    width: 200px;
+    margin-top: 30px;
+    font-size: 1.1rem;
+   padding: 12px 0;
+   border-radius: 5px;
+   background-color: var(--box-color);
+   cursor: pointer;
+   font-weight: 500;
+
+}
+
+.contact-result-container button:hover {
+    background-color: var(--font-color);
+    color: #000;
+}
+    

@@ -97,6 +97,17 @@ app.get("/contact", (req, res) => {
   res.render("contact", { pageTitle: "Contact" });
 });
 
+app.post("/submit", (req, res) => {
+  const { fullname, email, message } = req.body;
+  console.log(`Name: ${fullname}, Email: ${email}, Message: ${message}`);
+  res.redirect("/success?status=success");
+});
+
+app.get("/success", (req, res) => {
+  const isSuccess = req.query.status === "success";
+  res.render("formResult", { isSuccess });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}..`);
 });
