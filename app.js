@@ -74,7 +74,7 @@ app.post("/login", async (req, res) => {
       if (passwordMatch) {
         res.cookie("userCookie", username, {
           httpOnly: true,
-          maxAge: 60000 * 60, // 1hr
+          maxAge: 60000 * 60 * 6, // 6hr
         });
         res.redirect("/");
       } else {
@@ -95,6 +95,17 @@ app.use("/memos", checkAuthenticated, memoRoutes);
 
 app.get("/contact", (req, res) => {
   res.render("contact", { pageTitle: "Contact" });
+});
+
+app.post("/submit", (req, res) => {
+  const { fullname, email, message } = req.body;
+  console.log(`Name: ${fullname}, Email: ${email}, Message: ${message}`);
+  res.redirect("/success?status=success");
+});
+
+app.get("/success", (req, res) => {
+  const isSuccess = req.query.status === "success";
+  res.render("formResult", { isSuccess });
 });
 
 app.listen(PORT, () => {

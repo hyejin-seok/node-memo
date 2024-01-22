@@ -1,0 +1,100 @@
+@import 'variables.css';
+
+.auth-container {
+    background-color: var(--box-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); 
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container h1 {
+    color: var(--point-color);
+    margin-bottom: 15px;
+}
+
+.auth-icon-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-icon-box {
+    height: 80px;
+    width: 80px;
+    color: var(--header-color);
+    margin-bottom: 15px;
+}
+
+.auth-msg {
+    text-align: center;
+    color: var(--header-color);
+}
+
+.auth-container a {
+    color: var(--point-color);
+    font-size: 1.1rem;
+}
+
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.auth-container .input-container {
+    margin-bottom: 15px;
+    text-align: left
+}
+
+.auth-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.auth-container input::placeholder {
+    color: var(--bg-color);
+    opacity: 0.4;
+}
+
+.auth-container button {
+    background-color: var(--btn-color);
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.auth-container button:hover {
+    background-color: var(--font-color);
+    color: var(--point-color);
+}
+
+.success-message,
+.error-message {
+    color: var(--point-color);
+}

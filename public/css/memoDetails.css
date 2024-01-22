@@ -1,0 +1,60 @@
+@import 'variables.css';
+
+.detail-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-container {
+    width: 500px;
+    height: auto;
+    background-color: var(--box-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+.detail-innerbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-innerbox span {
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
+
+.detail-innerbox h3,
+.detail-innerbox p {
+    width: 90%;
+    border: 1px solid var(--point-color);
+    padding: 10px;
+}
+
+.detail-btn {
+    margin: 20px 0;
+}
+
+.detail-btn a {
+    background-color: var(--btn-color);
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.detail-btn a:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+}

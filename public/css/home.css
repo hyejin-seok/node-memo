@@ -1,0 +1,96 @@
+@import 'variables.css';
+
+.home-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/images/main.jpg) no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(45, 67, 86, 0.4); 
+    z-index: 1;
+}
+
+.inner-container {
+    width: 80vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.home-text-box {
+    position: relative;
+    width: 500px;
+    height: auto;
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    color: #14202e;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    overflow: hidden;
+    letter-spacing: 1.8px;
+    font-weight: 500;
+    line-height: 2rem;
+    
+}
+
+.home-text-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3); 
+    z-index: -1;
+}
+
+.welcome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.logout-box {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    background-color: var(--font-color);
+    border-radius: 5px;
+}
+
+.logout-box a {
+    text-decoration: none;
+    color: var(--point-color);
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-box:hover,
+.logout-box a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.logout-box svg {
+    width: 30px;
+    margin-right: 5px;
+}
