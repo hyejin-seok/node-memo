@@ -74,7 +74,7 @@ app.post("/login", async (req, res) => {
       if (passwordMatch) {
         res.cookie("userCookie", username, {
           httpOnly: true,
-          maxAge: 60000 * 60, // 1hr
+          maxAge: 60000 * 60 * 6, // 6hr
         });
         res.redirect("/");
       } else {

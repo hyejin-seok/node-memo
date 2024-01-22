@@ -1,0 +1,53 @@
+@import 'variables.css';
+
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container {
+    width: 80vw;
+    height: 100vh;
+}
+
+.welcome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+
+.logout-box {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: var(--box-color);
+    border-radius: 5px;
+}
+
+.logout-box a {
+    text-decoration: none;
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logout-box:hover {
+    background-color: var(--font-color);
+    color: black
+}
+
+.logout-box svg {
+    width: 30px;
+    margin-right: 5px;
+}

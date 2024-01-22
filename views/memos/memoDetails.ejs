@@ -1,9 +1,20 @@
 <%- include("../partials/header", { pageTitle }) %>
 
-<h1>Memo Details</h1>
-<h2><%= memo.title %></h2>
-<p><%= memo.content %></p>
-<a href="/memos" class="button">Back</a>
-<a href="/memos/<%= memo.id %>/edit" class="button">Edit</a>
-
+<section class="detail-section">
+  <h1>Memo Details</h1>
+  <div class="detail-container">
+    <div class="detail-innerbox">
+      <span>Title:</span>
+      <p><%= memo.title %></p>
+      <span>Category:</span>
+      <p><%= memo.category %></p>
+      <span>Content:</span>
+      <p><%= memo.content %></p>
+      <div class="detail-btn">
+        <a href="/memos" class="button">Back</a>
+        <a href="/memos/<%= memo.id %>/edit" class="button">Edit</a>
+      </div>
+    </div>
+  </div>
+</section>
 <%- include("../partials/footer") %>

@@ -9,12 +9,12 @@ function getMemoById(id) {
   return Memo.getMemoById(id);
 }
 
-function createMemo(title, content) {
-  return Memo.createMemo(title, content);
+function createMemo(title, category, content) {
+  return Memo.createMemo(title, category, content);
 }
 
-function updateMemo(id, title, content) {
-  return Memo.updateMemo(id, title, content);
+function updateMemo(id, title, category, content) {
+  return Memo.updateMemo(id, title, category, content);
 }
 
 function deleteMemo(id) {

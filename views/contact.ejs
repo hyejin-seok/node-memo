@@ -1,17 +1,27 @@
 <%- include("partials/header") %>
 
-<h1>This is the contatct page!</h1>
+<section class="contact-form-container">
+    <h1>Contact page</h1>
 
-<form action="/submit" method="POST">
-  <!-- div*3>label+input -->
-  <div>
-    <label for="">Name:</label><input type="text" name="fullname" required />
+    <form class="contact-form" action="/submit" method="POST">
+      <div class="contact-input">
+        <label for="fullname">Name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+      </div>
+      <div class="contact-input">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="contact-input">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <div class="contact-btn">
+        <!-- <input type="submit" value="Send message" /> -->
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
   </div>
-  <div>
-    <label for="">Email:</label><input type="email" name="email" required />
-  </div>
-  <div><label for="">Message</label><textarea name="message"></textarea></div>
-  <div><input type="submit" value="Send message" /></div>
-</form>
+</section>
 
 <%- include("partials/footer") %>

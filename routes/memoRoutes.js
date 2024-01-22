@@ -4,7 +4,6 @@ const memoController = require("../controllers/memoController");
 
 // Route to add a memo
 router.get("/add", (req, res) => {
-  console.log("Reached GET /memos/add");
   res.render("memos/addMemo", { pageTitle: "Create Memo" });
 });
 
@@ -28,9 +27,8 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/add", (req, res) => {
-  console.log("Reached POST /memos/add");
-  const { title, content } = req.body;
-  const memo = memoController.createMemo(title, content);
+  const { title, category, content } = req.body;
+  const memo = memoController.createMemo(title, category, content);
   res.redirect("/memos");
 });
 
@@ -48,8 +46,8 @@ router.get("/:id/edit", (req, res) => {
 // Route to handle form submission for editing memo
 router.post("/:id/edit", (req, res) => {
   const memoId = parseInt(req.params.id);
-  const { title, content } = req.body;
-  const memo = memoController.updateMemo(memoId, title, content);
+  const { title, category, content } = req.body;
+  const memo = memoController.updateMemo(memoId, title, category, content);
   if (!memo) {
     res.status(404).json({ error: "Memo not found" });
   } else {

@@ -1,0 +1,30 @@
+@import 'variables.css';
+
+header nav {
+    /* background: #f28482; */
+    background: var(--header-color);
+    /* background: #EAB2A0; */
+    position: sticky;
+    margin-top: 30px;
+    z-index: 10;
+    padding: 1rem;
+    text-align: center;
+    width: 100vw;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav a {
+    text-decoration: none;
+    margin: 0 40px;
+    font-size: 1.2rem;
+    /* color: #f7ede2; */
+    color: var(--font-color);
+}
+
+header nav a:hover {
+    /* color: #f6bd60; */
+    color: var(--bg-color);
+}
+
+

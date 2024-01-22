@@ -1,7 +1,8 @@
 class Memo {
-  constructor(id, title, content) {
+  constructor(id, title, category, content) {
     this.id = id;
     this.title = title;
+    this.category = category;
     this.content = content;
   }
 
@@ -16,18 +17,19 @@ class Memo {
   }
 
   // Create a memo
-  static createMemo(title, content) {
+  static createMemo(title, category, content) {
     const memoId = memos.length + 1;
-    const memo = new Memo(memoId, title, content);
+    const memo = new Memo(memoId, title, category, content);
     memos.push(memo);
     return memo;
   }
 
   // Update a memo
-  static updateMemo(id, title, content) {
+  static updateMemo(id, title, category, content) {
     const memo = memos.find((item) => item.id === id);
     if (memo) {
       memo.title = title;
+      memo.category = category;
       memo.content = content;
     }
     return memo;
