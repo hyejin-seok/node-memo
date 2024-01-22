@@ -1,0 +1,9 @@
+<%- include("../partials/header", { pageTitle }) %>
+
+<h1>Memo Details</h1>
+<h2><%= memo.title %></h2>
+<p><%= memo.content %></p>
+<a href="/memos" class="button">Back</a>
+<a href="/memos/<%= memo.id %>/edit" class="button">Edit</a>
+
+<%- include("../partials/footer") %>

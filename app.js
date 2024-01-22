@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
+const path = require("path");
+const methodOverride = require("method-override");
 const PORT = 3002;
 
 const memoRoutes = require("./routes/memoRoutes");
@@ -10,7 +12,9 @@ const users = [];
 const sercureKey = "adfqef1233afdgadf";
 
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
+app.use(methodOverride("_method"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser(sercureKey));
@@ -29,7 +33,7 @@ app.get("/", checkAuthenticated, (req, res) => {
 });
 
 app.get("/signup", (req, res) => {
-  res.render("signup", { pageTitle: "Sign up" });
+  res.render("auth/signup", { pageTitle: "Sign up" });
 });
 
 app.post("/signup", async (req, res) => {
@@ -51,7 +55,7 @@ app.get("/login", (req, res) => {
   if (req.cookies && req.cookies.userCookie) {
     res.redirect("/");
   } else {
-    res.render("login", { pageTitle: "Login", error, logout });
+    res.render("auth/login.ejs", { pageTitle: "Login", error, logout });
   }
 });
 
@@ -88,6 +92,10 @@ app.get("/logout", (req, res) => {
 });
 
 app.use("/memos", checkAuthenticated, memoRoutes);
+
+app.get("/contact", (req, res) => {
+  res.render("contact", { pageTitle: "Contact" });
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}..`);

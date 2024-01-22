@@ -1,0 +1,34 @@
+<%- include("../partials/header", { pageTitle }) %>
+
+<h1>Memo List</h1>
+
+<a href="/memos/add" class="button">Add New Memo</a>
+
+<ul>
+  <% memos.forEach((memo) => { %>
+  <li>
+    <h3><%= memo.title %></h3>
+    <p><%= memo.content %></p>
+
+    <!-- Button to edit a memo -->
+    <a href="/memos/<%= memo.id %>" class="button">View</a>
+
+    <!-- Button to delete a memo -->
+    <form
+      method="post"
+      action="/memos/<%= memo.id %>?_method=DELETE"
+      style="display: inline"
+    >
+      <button
+        type="submit"
+        class="button"
+        onclick="return confirm('Are you sure you want to delete this memo?')"
+      >
+        Delete
+      </button>
+    </form>
+  </li>
+  <% }); %>
+</ul>
+
+<%- include("../partials/footer") %>
