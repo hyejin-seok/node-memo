@@ -1,9 +1,7 @@
 @import 'variables.css';
 
 header nav {
-    /* background: #f28482; */
     background: var(--header-color);
-    /* background: #EAB2A0; */
     position: sticky;
     margin-top: 30px;
     z-index: 10;
@@ -18,12 +16,10 @@ header nav a {
     text-decoration: none;
     margin: 0 40px;
     font-size: 1.2rem;
-    /* color: #f7ede2; */
     color: var(--font-color);
 }
 
 header nav a:hover {
-    /* color: #f6bd60; */
     color: var(--bg-color);
 }
 

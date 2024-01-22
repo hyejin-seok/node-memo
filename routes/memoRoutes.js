@@ -11,17 +11,15 @@ router.get("/add", (req, res) => {
 router.get("/", (req, res) => {
   const memos = memoController.getAllMemos();
   res.render("memos/memos", { memos, pageTitle: "Memos List" });
-  //   res.json(memos);
 });
 
 // Route to fetch one memo
 router.get("/:id", (req, res) => {
-  const memoId = parseInt(req.params.id); // 여기서 id의 type은 string이라서 숫자로 변환 필요.
+  const memoId = parseInt(req.params.id);
   const memo = memoController.getMemoById(memoId);
   if (!memo) {
     res.status(404).json({ error: "Memo not found" });
   } else {
-    // res.status(200).json(memo);
     res.render("memos/memoDetails", { memo, pageTitle: "Memo Details" });
   }
 });

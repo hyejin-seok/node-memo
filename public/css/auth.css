@@ -4,7 +4,6 @@
     background-color: var(--box-color);
     padding: 20px;
     border-radius: 5px;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); 
     width: 350px;
     text-align: center;
@@ -16,7 +15,6 @@
 
 .auth-container h1 {
     color: var(--point-color);
-    /* color: var(--header-color); */
     margin-bottom: 15px;
 }
 
@@ -67,7 +65,6 @@
 .auth-container input {
     width: 100%;
     padding: 10px;
-    /* border: 1px solid #f7ede2; */
     border: 1px solid #fff;
     border-radius: 3px;
     font-size: 1rem;

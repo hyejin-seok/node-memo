@@ -2,11 +2,8 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* font-family: 'Sofia Sans', sans-serif; */
-    /* background-color: #f5cac3; */
     background-color: var(--bg-color);
-    /* color: #495057; */
-    /* color: #edede9; */
+
     color: var(--font-color);
     margin: 0;
     height: 100vh;    
@@ -15,7 +12,6 @@ body {
 section {
     width: 100vw;
     height: 100vh;
-    /* text-align: center; */
 }
 
 section h1 {
@@ -25,7 +21,6 @@ section h1 {
 }
 
 .container {
-    /* max-width: 600px; */
     width: 100%;
     padding: 20px;
     display: flex;
@@ -36,8 +31,6 @@ section h1 {
 button {
     border: 0;
 }
-
-
 
 footer {
     margin: 20px 0 0;

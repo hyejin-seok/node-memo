@@ -24,7 +24,6 @@
   font-family: 'helvetica', san-serif;
   min-height: 25vh;
   background: #262a2b;
-  /* background: #1f2741; */
   border: 1px solid #252727;
   text-align: left;
   margin: 30px 20px;
@@ -157,36 +156,5 @@
   background: linear-gradient(to right, #cccccc, #dcdcdc);
 } 
 
-
-/* .tilesWrap li:nth-child(1):before,
-.tilesWrap li:nth-child(5n):before {
-  background: #f6bd60;
-  background: -webkit-linear-gradient(to right, #f6bd60, #f3a647);
-  background: linear-gradient(to right, #f6bd60, #f3a647);
-}
-.tilesWrap li:nth-child(2):before,
-.tilesWrap li:nth-child(5n + 1):before {
-  background: #f7ede2;
-  background: -webkit-linear-gradient(to right, #f7ede2, #d5c5b3);
-  background: linear-gradient(to right, #f7ede2, #d5c5b3);
-}
-.tilesWrap li:nth-child(3):before,
-.tilesWrap li:nth-child(5n + 2):before {
-  background: #f5cac3;
-  background: -webkit-linear-gradient(to right, #f5cac3, #e2a594);
-  background: linear-gradient(to right, #f5cac3, #e2a594);
-}
-.tilesWrap li:nth-child(4):before,
-.tilesWrap li:nth-child(5n + 3):before {
-  background: #84a59d;
-  background: -webkit-linear-gradient(to right, #84a59d, #638774);
-  background: linear-gradient(to right, #84a59d, #638774);
-}
-.tilesWrap li:nth-child(5):before,
-.tilesWrap li:nth-child(5n + 4):before {
-  background: #f28482;
-  background: -webkit-linear-gradient(to right, #f28482, #d45a5a);
-  background: linear-gradient(to right, #f28482, #d45a5a);
-} */
 
 

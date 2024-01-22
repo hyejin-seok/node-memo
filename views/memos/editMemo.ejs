@@ -30,26 +30,8 @@
 <%= memo.content %>
 </textarea
     >
-    <!-- <input class="submit" value="Update Memo" /> -->
     <button type="submit">Edit</button>
   </form>
-
-  <!-- <div class="memo-edit-btns">
-    <form
-      method="post"
-      action="/memos/<%= memo.id %>?_method=DELETE"
-      style="display: inline"
-    >
-      <button
-        type="submit"
-        class="button"
-        onclick="return confirm('Are you sure you want to delete this memo?')"
-      >
-        Delete
-      </button>
-    </form>
-    <a href="/memos"><button>Go Back</button></a>
-  </div> -->
 </section>
 
 <%- include("../partials/footer.ejs") %>

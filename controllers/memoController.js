@@ -5,7 +5,6 @@ function getAllMemos() {
 }
 
 function getMemoById(id) {
-  // Add logic here
   return Memo.getMemoById(id);
 }
 

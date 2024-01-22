@@ -1,11 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
-
 :root {
     --bg-color: #2D4356;
     --font-color: #ede0d4;
-    /* --font-color: #b7b7b7; */
-    /* --font-color: #f7ede2; */
     --header-color: #A76F6F;
     --box-color: #EAB2A0;
     --btn-color: #435B66;
