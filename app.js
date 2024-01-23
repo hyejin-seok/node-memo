@@ -93,7 +93,7 @@ app.get("/logout", (req, res) => {
 
 app.use("/memos", checkAuthenticated, memoRoutes);
 
-app.get("/contact", (req, res) => {
+app.get("/contact", checkAuthenticated, (req, res) => {
   res.render("contact", { pageTitle: "Contact" });
 });
 

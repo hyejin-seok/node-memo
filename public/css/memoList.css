@@ -11,6 +11,7 @@
   margin: 50px auto;
   list-style: none;
   text-align: center;
+  width: 80%;
 }
 .tilesWrap li {
   display: inline-block;
@@ -20,9 +21,8 @@
   padding: 80px 20px 40px;
   position: relative;
   vertical-align: top;
-  margin: 10px;
-  font-family: 'helvetica', san-serif;
-  min-height: 25vh;
+  margin: 20px;
+  height: 200px;
   background: #262a2b;
   border: 1px solid #252727;
   text-align: left;
